@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="http://localhost:8080/snacks/catalogo">
+<style>
+</style>
+</head>
+<body>
+	<body>
+        <div class="purple darken-1">
+            <div class="nav-wrapper container ">
+                <a href="/usuario/logar" class="brand-logo">Perfumaria</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down ">
+                    <li><a href="/fornecedor/cadastrar">Cadastrar Fornecedor</a></li>
+                </ul>
+            </div>
+        </div>
+	<div class="container" id="login">
+        <h3>Login</h3>
+		<div class="row">
+			<form class="col s6" action="/usuario/entrar" id="interno" method="post">
+				<div class="row">
+					<div class="input-field col s6">
+						<label>E-mail</label><br> <input
+							id="email" type="email" name="email" >
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<label >Senha</label> <br> <input
+							id="senha" type="password" name="senha">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4">
+						<button class="btn waves-effect waves-light" type="submit">Login</button>
+						<button class="btn waves-effect waves-light" type="reset">Limpar</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

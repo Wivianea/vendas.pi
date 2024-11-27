@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+</head>
+
+<body>
+    <nav class="purple darken-1">
+        <div class="nav-wrapper container ">
+            <a href="/" class="brand-logo">Perfumaria</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down ">
+                <li><a href="/usuario/logar">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class=" container row" style="margin-top: 70px;">
+        <h1>Cadastro de Usuário</h1>
+        <form class="col s12" action="/usuario/cadastrar" method="post" th:object="${usuario}">
+            <div class="row" hidden>
+                <div class="input-field col s12">
+                    <input id="first_name" type="text" name="nome" class="validate" th:field="*{id}" >
+                    <label class="active" for="first_name">Nome</label>
+                </div>
+            </div>
+            <div class="row" hidden>
+                <div class="input-field col s12">
+                    <input id="first_name" type="text" name="nome" class="validate" th:field="*{idFornecedor}" >
+                    <label class="active" for="first_name">Nome</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="first_name" type="text" name="nome" class="validate" th:field="*{nome}">
+                    <label class="active" for="first_name">Nome</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" name="email" class="validate" th:field="*{email}">
+                    <label class="active" for="email">Email</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="password" type="password" name="senha" class="validate" th:field="*{senha}">
+                    <label class="active" for="password">Senha</label>
+                </div>
+            </div>
+    </div>
+    <div style="text-align: center;">
+        <button class="btn waves-effect waves-light" type="submit">Cadastrar<i
+                class="material-icons right">submit</i></button>
+
+    </div>
+    </form>
+    </div>
+</body>
+</html>

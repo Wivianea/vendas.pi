@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornecedores</title>
+</head>
+<body>
+    <nav class="purple darken-1">
+		<div class="nav-wrapper container ">
+			<a href="/" class="brand-logo">Perfumaria</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down ">
+				<li><a href="#">Catálogo de Perfumes</a></li>
+        <li><a href="/usuario/logar">Sair</a></li>
+			</ul>
+		</div>
+	</nav>
+    <div class="container row" style="margin-top: 100px;">
+    <table class="highlight responsive-table">
+        <caption>Solicitar Fornecedor</caption>
+        <thead>
+          <tr>
+              <th>Nome</th>
+              <th>CNPJ</th>
+              <th>Contato</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="f : ${solicFornecedor}">
+            <td th:text="${f.nome}">Wiviane Araújo</td>
+            <td th:text="${f.CNPJ}">30050320</td>
+            <td th:text="${f.telefone}">(84)996922575</td>
+            <td><a th:href="@{/fornecedor/aceitar/{id}(id=${f.id})}"
+            	class="waves-effect waves-light btn-small">Aceitar Fornecedor</a></td>
+            <br>
+            <tr th:each="f : ${solicFornecedor}">
+            <td th:text="${f.nome}">Wilka Kelly</td>
+            <td th:text="${f.CNPJ}">30408050</td>
+            <td th:text="${f.telefone}">(84)994282785</td>
+            <td><a th:href="@{/fornecedor/aceitar/{id}(id=${f.id})}"
+                class="waves-effect waves-light btn-small">Aceitar Fornecedor</a></td>
+            <br>
+            <tr th:each="f : ${solicFornecedor}">
+            <td th:text="${f.nome}">Vitor Fernando</td>
+            <td th:text="${f.CNPJ}">60107045</td>
+            <td th:text="${f.telefone}">(84)988984729</td>
+            <td><a th:href="@{/fornecedor/aceitar/{id}(id=${f.id})}"
+                class="waves-effect waves-light btn-small">Aceitar Fornecedor</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container row" style="margin-top: 100px;">
+        <table class="highlight responsive-table">
+            <caption>Fornecedor Aceito</caption>
+            <thead>
+              <tr>
+                  <th>Nome</th>
+                  <th>CNPJ</th>
+                  <th>Contato</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr th:each="f : ${fornecedores}">
+                <td th:text="${f.nome}">Wiviane Araújo</td>
+                <td th:text="${f.CNPJ}">30050320</td>
+                <td th:text="${f.telefone}">(84)996922575</td>
+                <br>
+                 <tr th:each="f : ${fornecedores}">
+                <td th:text="${f.nome}">Wilka Kelly</td>
+                <td th:text="${f.CNPJ}">30408050</td>
+                <td th:text="${f.telefone}">(84)994282785</td>
+                <br>
+                 <tr th:each="f : ${fornecedores}">
+                <td th:text="${f.nome}">Vitor Fernando</td>
+                <td th:text="${f.CNPJ}">60107045</td>
+                <td th:text="${f.telefone}">(84)988984729</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+</body>
+</html>

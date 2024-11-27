@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Perfumes</title>
+    <style>
+        div#titulo{
+            text-align: center;
+        }
+        div#formulario{
+            text-align: center;
+            border-style: inset; 
+            margin-top: 30px; 
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="purple darken-1">
+		<div class="nav-wrapper container ">
+			<a href="/" class="brand-logo">Perfumaria</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down ">
+				<li><a href="/bebidas/catalogo">Catálogo de Perfumes</a></li>
+			</ul>
+		</div>
+	</nav>
+    <div id="titulo">
+        <h1>Cadastro de Perfume</h1>
+    </div>
+    <div id="formulario" class="container row">
+        <form action="/bebidas/cadastrar" method="post">
+            <div class="input-field col s6">
+                <input type="text" name="nome">
+                <label class="active" for="nome">Nome</label>
+            </div>
+            <div class="input-field col s6">
+                <input type="text" name="undFornecimento">
+                <label class="active" for="">Item Fornecido</label>
+            </div>
+            <div class="input-field col s12">
+                <input type="text" name="marca">
+                <label class="active" for="marca">Marca</label>
+            </div>
+            <div style="text-align: center; margin-top: 100px;">
+                <button class="btn waves-effect waves-light" type="submit">Cadastrar<i
+                        class="material-icons right"></i></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
